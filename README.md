@@ -3,11 +3,11 @@ This repository contains all the data related to the GRADE project.
 
 For each download we provide the link and a brief description. 
 
-### Training/validation data
+### Training/validation data --- COCO and YOLO formats
 1. TUM RGBD walking sequences labelled [yolo](https://keeper.mpdl.mpg.de/f/5346f793e0c7402a957c/) and [mrcnn](https://keeper.mpdl.mpg.de/f/240fce3f4ca24dc4a1f4/) formats.
    To keep things simple in `mrcnn` you have a `val2017` with all the images and a `annotations/instances_val2017.json` with all the annotations in COCO format. Thus, you can simply use a coco loader with this json/folder to load the data. 
    The `yolo` simply contains the `images` and `labels` folder.
-   
+   You can find the online version [here](https://universe.roboflow.com/tum-osduz/tum-subbg/dataset/2)
 2. [S-GRADE](https://keeper.mpdl.mpg.de/f/19ce92e2c7b048219b2a/), small subset of the GRADE dataset. You can find the jsons in COCO format for the masks, all the labels in yolo format, and both the groundtruth and the noisy images.
 
 3. [S-COCO](https://keeper.mpdl.mpg.de/f/fc09f2f6afc640f3b3bf/), small subset of COCO dataset. You can find the jsons in COCO format for the masks, all the labels in yolo format, and the images.
