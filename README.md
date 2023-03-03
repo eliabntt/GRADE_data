@@ -22,7 +22,7 @@ The npy files with the evaluation results of mrcnn are [here](https://keeper.mpd
 
 The list of results using these trained models with DynaSLAM and DynamicVINS are [here](https://keeper.mpdl.mpg.de/f/0a2b913f51514616a313/).
 
-The results can be visualized in this [ods]() and [xlsx]() for both networks.
+The results can be visualized in this [ods](https://keeper.mpdl.mpg.de/f/85ed82958f5b45bcab0a/) and [xlsx](https://keeper.mpdl.mpg.de/f/824ff83c264c445299f8/) for both networks.
 
 ### SLAM tested sequences
 For each we provide the original groundtruth rosbags and the noisy ones. Most of the folders have the logs/rosbags from which we extracted the results you can find in the paper.
