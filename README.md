@@ -1,5 +1,6 @@
 # GRADE_data
-This repository contains all the data related to the GRADE project.
+
+## This repository is part of the [GRADE](https://eliabntt.github.io/GRADE-RR/home) project
 
 For each download we provide the link and a brief description. 
 
@@ -21,6 +22,8 @@ The npy files with the evaluation results of mrcnn are [here](https://keeper.mpd
 
 The list of results using these trained models with DynaSLAM and DynamicVINS are [here](https://keeper.mpdl.mpg.de/f/0a2b913f51514616a313/).
 
+The results can be visualized in this [ods]() and [xlsx]() for both networks.
+
 ### SLAM tested sequences
 For each we provide the original groundtruth rosbags and the noisy ones. Most of the folders have the logs/rosbags from which we extracted the results you can find in the paper.
 
@@ -33,6 +36,14 @@ For each we provide the original groundtruth rosbags and the noisy ones. Most of
 7. [S](https://keeper.mpdl.mpg.de/f/f65c55ae0c0b4e8ebb90/) Static
 8. [SH](https://keeper.mpdl.mpg.de/f/e49efeb92414482ba478/) Static, horizontal
 
-The complete list of results, including RPE and ATE are [here]().
+The complete list of results, including RPE and ATE can be found in this [ods](https://keeper.mpdl.mpg.de/f/b7dd6de95bd14e668665/) and [xlsx](https://keeper.mpdl.mpg.de/f/88d2afde308c421c93a8/) files.
 
 For licensing information, please refer to the main repository located [here](https://github.com/eliabntt/GRADE-RR/).
+
+__________
+### CITATION
+If you find this work useful please cite our work as
+
+```
+
+```
