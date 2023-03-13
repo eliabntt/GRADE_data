@@ -44,7 +44,7 @@ You can see how to process the rosbags to reproduce our results [here](https://g
 
 We will release the rest of the data soon.
 
-
+### LICENSING
 
 For licensing information, please refer to the main repository located [here](https://github.com/eliabntt/GRADE-RR/).
 
