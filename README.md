@@ -4,7 +4,7 @@
 
 For each download we provide the link and a brief description. 
 
-### Training/validation data --- COCO and YOLO formats
+### Training/validation data, COCO and YOLO formats, people segmentation/detection tasks
 1. TUM RGBD walking sequences labelled [yolo](https://keeper.mpdl.mpg.de/f/5346f793e0c7402a957c/) and [mrcnn](https://keeper.mpdl.mpg.de/f/240fce3f4ca24dc4a1f4/) formats.
    To keep things simple in `mrcnn` you have a `val2017` with all the images and a `annotations/instances_val2017.json` with all the annotations in COCO format. Thus, you can simply use a coco loader with this json/folder to load the data. 
    The `yolo` simply contains the `images` and `labels` folder.
@@ -25,7 +25,7 @@ The list of results using these trained models with DynaSLAM and DynamicVINS are
 The results can be visualized in this [ods](https://keeper.mpdl.mpg.de/f/85ed82958f5b45bcab0a/) and [xlsx](https://keeper.mpdl.mpg.de/f/824ff83c264c445299f8/) for both networks.
 
 ### SLAM tested sequences
-For each we provide the original groundtruth rosbags and the noisy ones. Most of the folders have the logs/rosbags from which we extracted the results you can find in the paper.
+For each we provide the original groundtruth rosbags (reindex folder) and the noisy ones (reindex folder). Most of the downloads have the logs/rosbags from which we extracted the results you can find in the paper.
 
 1. [F](https://keeper.mpdl.mpg.de/f/37a0dc5a855547b5b892/) With few flying objects
 2. [FH](https://keeper.mpdl.mpg.de/f/f479032ed14e4244a814/) With few flying objects, horizontal
@@ -37,6 +37,14 @@ For each we provide the original groundtruth rosbags and the noisy ones. Most of
 8. [SH](https://keeper.mpdl.mpg.de/f/e49efeb92414482ba478/) Static, horizontal
 
 The complete list of results, including RPE and ATE can be found in this [ods](https://keeper.mpdl.mpg.de/f/b7dd6de95bd14e668665/) and [xlsx](https://keeper.mpdl.mpg.de/f/88d2afde308c421c93a8/) files.
+
+You can see how to process the rosbags to reproduce our results [here](https://github.com/robot-perception-group/GRADE_tools/tree/main)
+
+### Raw data archives
+
+We will release the rest of the data soon.
+
+
 
 For licensing information, please refer to the main repository located [here](https://github.com/eliabntt/GRADE-RR/).
 
