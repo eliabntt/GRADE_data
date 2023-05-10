@@ -36,6 +36,8 @@ For each we provide the original groundtruth rosbags (reindex folder) and the no
 7. [S](https://keeper.mpdl.mpg.de/f/f65c55ae0c0b4e8ebb90/) Static
 8. [SH](https://keeper.mpdl.mpg.de/f/e49efeb92414482ba478/) Static, horizontal
 
+Note: the bag files are COMPRESSED. Run `rosbag decompress *.bag` in the desired folder to decompress them automatically. `rosbag info` will give you useful info on the contents of each bag.
+
 The complete list of results, including RPE and ATE can be found in this [ods](https://keeper.mpdl.mpg.de/f/b7dd6de95bd14e668665/) and [xlsx](https://keeper.mpdl.mpg.de/f/88d2afde308c421c93a8/) files.
 
 You can see how to process the rosbags to reproduce our results [here](https://github.com/robot-perception-group/GRADE_tools/tree/main)
