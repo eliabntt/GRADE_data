@@ -4,6 +4,10 @@
 
 For each download we provide the link and a brief description. 
 
+________
+
+## Indoor Humans
+
 ### Training/validation data, COCO and YOLO formats, people segmentation/detection tasks
 1. TUM RGBD walking sequences labelled [yolo](https://keeper.mpdl.mpg.de/f/5346f793e0c7402a957c/) and [mrcnn](https://keeper.mpdl.mpg.de/f/240fce3f4ca24dc4a1f4/) formats.
    To keep things simple in `mrcnn` you have a `val2017` with all the images and a `annotations/instances_val2017.json` with all the annotations in COCO format. Thus, you can simply use a coco loader with this json/folder to load the data. 
@@ -24,7 +28,23 @@ The list of results using these trained models with DynaSLAM and DynamicVINS are
 
 The results can be visualized in this [ods](https://keeper.mpdl.mpg.de/f/85ed82958f5b45bcab0a/) and [xlsx](https://keeper.mpdl.mpg.de/f/824ff83c264c445299f8/) for both networks.
 
-### SLAM tested sequences
+### Raw data archives
+
+We will release the rest of the data soon. This will include (as groundtruth, unless specified):
+1. Converted Front3D Environments
+2. Converted Cloth3D sequences
+3. Converted AMASS sequences
+4. Converted Google Scanned Objects
+5. Experiment USD files and informations
+6. Experiments RGB+DEPTH
+7. Experiments camera poses, robot poses, camera and robot IMU readings
+8. Experiments Instance segmentation
+9. Experiments bounding boxes and object poses
+10. Humans vertices, skeletal and 3D bbox information in world coordinate frame
+11. Re-indexed rosbags
+______
+
+## SLAM tested sequences
 For each we provide the original groundtruth rosbags (reindex folder) and the noisy ones (reindex folder). Most of the downloads have the logs/rosbags from which we extracted the results you can find in the paper.
 
 1. [F](https://keeper.mpdl.mpg.de/f/37a0dc5a855547b5b892/) With few flying objects
@@ -42,27 +62,17 @@ The complete list of results, including RPE and ATE can be found in this [ods](h
 
 You can see how to process the rosbags to reproduce our results [here](https://github.com/robot-perception-group/GRADE_tools/tree/main)
 
-### Raw data archives
+______
 
-We will release the rest of the data soon.
+## Zebras
+
+Please follow this [webpage](https://keeper.mpdl.mpg.de/d/12abb3bb6b12491480d5/).
+
+_______
 
 ### LICENSING
 
 For licensing information, please refer to the main repository located [here](https://github.com/eliabntt/GRADE-RR/).
-
 __________
 ### CITATION
-If you find this work useful please cite our work as
-
-```
-@misc{https://doi.org/10.48550/arxiv.2303.04466,
-  doi = {10.48550/ARXIV.2303.04466},
-  url = {https://arxiv.org/abs/2303.04466},
-  author = {Bonetto, Elia and Xu, Chenghao and Ahmad, Aamir},
-  keywords = {Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {GRADE: Generating Realistic Animated Dynamic Environments for Robotics Research},
-  publisher = {arXiv},
-  year = {2023},
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
-```
+If you find this work useful please cite our work based on [this](https://github.com/eliabntt/GRADE-RR#citation) information
