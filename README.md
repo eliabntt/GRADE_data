@@ -66,7 +66,7 @@ ______
 
 ## Zebras
 
-Please follow this [webpage](https://keeper.mpdl.mpg.de/d/12abb3bb6b12491480d5/).
+Please follow this [webpage](https://keeper.mpdl.mpg.de/d/12abb3bb6b12491480d5/). A readme will be inside.
 
 _______
 
@@ -74,5 +74,9 @@ _______
 
 For licensing information, please refer to the main repository located [here](https://github.com/eliabntt/GRADE-RR/).
 __________
+
 ### CITATION
-If you find this work useful please cite our work based on [this](https://github.com/eliabntt/GRADE-RR#citation) information
+
+If you find this work useful please cite it based on [this](https://github.com/eliabntt/GRADE-RR#citation) information.
+Please cite `GRADE` and `Synthetic Data-based Detection of Zebras in Drone Imagery` if you use any of the Zebra-related data.
+Cite `GRADE` and the relative workshop paper if you use any code/data for dynamic SLAM/human detection projects.
