@@ -4,9 +4,25 @@
 
 For each download we provide the link and a brief description. 
 
+We release data for:
+1. [Indoor humans detection and segmentation](https://github.com/eliabntt/GRADE_data/blob/main/README.md#indoor-humans)
+2. [Static and Dynamic SLAM](https://github.com/eliabntt/GRADE_data/blob/main/README.md#slam-tested-sequences) sequences used in the GRADE paper
+3. [Zebras](https://github.com/eliabntt/GRADE_data/blob/main/README.md#zebras) training data, synthetic data, animated USDs, and trained models
+4. More data coming soon. This will include (as groundtruth, unless specified):
+   1. Converted Front3D Environments
+   2. Converted Cloth3D sequences
+   3. Converted AMASS sequences
+   4. Converted Google Scanned Objects
+   5. Experiment USD files and informations
+   6. Experiments RGB+DEPTH
+   7. Experiments camera poses, robot poses, camera and robot IMU readings
+   8. Experiments Instance segmentation
+   9. Experiments bounding boxes and object poses
+   10. Humans vertices, skeletal and 3D bbox information in world coordinate frame
+   11. Re-indexed rosbags
 ________
 
-## Indoor Humans
+## Indoor Humans Detection/Segmentation
 
 ### Training/validation data, COCO and YOLO formats, people segmentation/detection tasks
 1. TUM RGBD walking sequences labelled [yolo](https://keeper.mpdl.mpg.de/f/5346f793e0c7402a957c/) and [mrcnn](https://keeper.mpdl.mpg.de/f/240fce3f4ca24dc4a1f4/) formats.
@@ -27,24 +43,9 @@ The npy files with the evaluation results of mrcnn are [here](https://keeper.mpd
 The list of results using these trained models with DynaSLAM and DynamicVINS are [here](https://keeper.mpdl.mpg.de/f/0a2b913f51514616a313/).
 
 The results can be visualized in this [ods](https://keeper.mpdl.mpg.de/f/85ed82958f5b45bcab0a/) and [xlsx](https://keeper.mpdl.mpg.de/f/824ff83c264c445299f8/) for both networks.
-
-### Raw data archives
-
-We will release the rest of the data soon. This will include (as groundtruth, unless specified):
-1. Converted Front3D Environments
-2. Converted Cloth3D sequences
-3. Converted AMASS sequences
-4. Converted Google Scanned Objects
-5. Experiment USD files and informations
-6. Experiments RGB+DEPTH
-7. Experiments camera poses, robot poses, camera and robot IMU readings
-8. Experiments Instance segmentation
-9. Experiments bounding boxes and object poses
-10. Humans vertices, skeletal and 3D bbox information in world coordinate frame
-11. Re-indexed rosbags
 ______
 
-## SLAM tested sequences
+## Dynamic SLAM tested sequences
 For each we provide the original groundtruth rosbags (reindex folder) and the noisy ones (reindex folder). Most of the downloads have the logs/rosbags from which we extracted the results you can find in the paper.
 
 1. [F](https://keeper.mpdl.mpg.de/f/37a0dc5a855547b5b892/) With few flying objects
