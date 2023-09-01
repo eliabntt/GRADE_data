@@ -5,7 +5,7 @@
 For each download we provide the link and a brief description. 
 
 We release data for:
-1. [Indoor humans detection and segmentation](https://github.com/eliabntt/GRADE_data/blob/main/README.md#indoor-humans-Detection/Segmentation)
+1. [Indoor humans detection and segmentation](https://github.com/eliabntt/GRADE_data/#indoor-humans-detectionsegmentation)
 2. [Static and Dynamic SLAM](https://github.com/eliabntt/GRADE_data/blob/main/README.md#slam-tested-sequences) sequences used in the GRADE paper
 3. [Zebras](https://github.com/eliabntt/GRADE_data/blob/main/README.md#zebras) training data, synthetic data, animated USDs, and trained models
 4. More data coming soon. This will include (as groundtruth, unless specified):
@@ -25,44 +25,57 @@ ________
 ## Indoor Humans Detection/Segmentation
 
 ### Training/validation data, COCO and YOLO formats, people segmentation/detection tasks
-1. TUM RGBD walking sequences labelled [yolo](https://keeper.mpdl.mpg.de/f/5346f793e0c7402a957c/) and [mrcnn](https://keeper.mpdl.mpg.de/f/240fce3f4ca24dc4a1f4/) formats.
-   To keep things simple in `mrcnn` you have a `val2017` with all the images and a `annotations/instances_val2017.json` with all the annotations in COCO format. Thus, you can simply use a coco loader with this json/folder to load the data. 
-   The `yolo` simply contains the `images` and `labels` folder.
-   You can find the online version in [roboflow](https://universe.roboflow.com/tum-osduz/tum-fr3-walking)
-2. [S-GRADE](https://keeper.mpdl.mpg.de/f/19ce92e2c7b048219b2a/), small subset of the GRADE dataset. You can find the jsons in COCO format for the masks, all the labels in yolo format, and both the groundtruth and the noisy images.
+All the datasets can be found [here](https://keeper.mpdl.mpg.de/d/0b4869a60428479f8690/).
 
-3. [S-COCO](https://keeper.mpdl.mpg.de/f/fc09f2f6afc640f3b3bf/), small subset of COCO dataset. You can find the jsons in COCO format for the masks, all the labels in yolo format, and the images.
-4. [A-GRADE](https://keeper.mpdl.mpg.de/f/11761e373eb14f8f9ce4/), full GRADE dataset. You can find the jsons in COCO format for the masks, all the labels in yolo format.
+All the datasets have both the YOLO-style and the COCO-style labels. Converters between the two can be found in the [GRADE_tools](https://github.com/robot-perception-group/GRADE_tools) repository.
+
+In there you will find:
+1. TUM RGBD fr3/walking sequences labelled [link](https://keeper.mpdl.mpg.de/f/a3723c2c6b7d45c3bc7e/).
+   You can find and improve the dataset in [roboflow](https://universe.roboflow.com/tum-osduz/tum-fr3-walking)
+2. [S-GRADE](https://keeper.mpdl.mpg.de/f/b1400d9ee37f4faa8a97/), small subset of the GRADE dataset.
+3. [S-COCO](https://keeper.mpdl.mpg.de/f/92c0bf21ddbe4531b40d/), small subset of COCO dataset containing only people. 
+4. [A-GRADE](https://keeper.mpdl.mpg.de/f/8975b136ca7c470cb163/), full GRADE dataset.
+5. [COCO](https://keeper.mpdl.mpg.de/f/e9ba574b614349898e9d/) the subset of COCO containing only people
 
 ### Trained models
-[YOLO](https://keeper.mpdl.mpg.de/f/88a56a9325114bb6b37c/)
+[YOLOv5](https://keeper.mpdl.mpg.de/f/88a56a9325114bb6b37c/). Reproduce the results following using YOLOv5 at [this](https://github.com/ultralytics/yolov5/tree/5c91daeaecaeca709b8b6d13bd571d068fdbd003) commit.
 
-[MRCNN](https://keeper.mpdl.mpg.de/f/9bbfefa5d68d433b99e5/)
+[detectron2(i.e. MaskRCNN)]https://keeper.mpdl.mpg.de/f/9f4bc4a285c748c8bd45/). Reproduce the results following [this](https://github.com/robot-perception-group/GRADE_tools/tree/9cff9dbe7237da4fff93a26362369110e126c96e/mrcnn)
 
-The npy files with the evaluation results of mrcnn are [here](https://keeper.mpdl.mpg.de/f/0a2b913f51514616a313/). For YOLO you can easily do these given the data above. 
-
-The list of results using these trained models with DynaSLAM and DynamicVINS are [here](https://keeper.mpdl.mpg.de/f/0a2b913f51514616a313/).
-
-The results can be visualized in this [ods](https://keeper.mpdl.mpg.de/f/85ed82958f5b45bcab0a/) and [xlsx](https://keeper.mpdl.mpg.de/f/824ff83c264c445299f8/) for both networks.
+The results can be reproduced by using the networks at th
 ______
 
 ## Dynamic SLAM tested sequences
-For each we provide the original groundtruth rosbags (reindex folder) and the noisy ones (reindex folder). Most of the downloads have the logs/rosbags from which we extracted the results you can find in the paper.
 
-1. [F](https://keeper.mpdl.mpg.de/f/37a0dc5a855547b5b892/) With few flying objects
-2. [FH](https://keeper.mpdl.mpg.de/f/f479032ed14e4244a814/) With few flying objects, horizontal
-3. [D](https://keeper.mpdl.mpg.de/f/de3f917c925d46a9b39f/) Dynamic without flying objects
-4. [DH](https://keeper.mpdl.mpg.de/f/6a23acba9dba40a4865a/) Dynamic without flying objects, horizontal
-5. [WO](https://keeper.mpdl.mpg.de/f/1d6dfb859dcb4ac69be9/)  With occlusions
-6. [WOH](https://keeper.mpdl.mpg.de/f/a6d613c780344b5393df/) With occlusion, horizontal
-7. [S](https://keeper.mpdl.mpg.de/f/f65c55ae0c0b4e8ebb90/) Static
-8. [SH](https://keeper.mpdl.mpg.de/f/e49efeb92414482ba478/) Static, horizontal
+### GRADE data testing
+For each we provide the original groundtruth rosbags and the noisy ones for both 3.5 and 5 meters depth. 
+
+Following the paper convention we have
+1. F - with few flying objects
+2. FH - with few flying objects, horizontal
+3. D - dynamic without flying objects
+4. DH - dynamic without flying objects, horizontal
+5. WO - with occlusions
+6. WOH - with occlusion, horizontal
+7. S - static
+8. SH - static, horizontal
 
 Note: the bag files are COMPRESSED. Run `rosbag decompress *.bag` in the desired folder to decompress them automatically. `rosbag info` will give you useful info on the contents of each bag.
 
-The complete list of results, including RPE and ATE can be found in this [ods](https://keeper.mpdl.mpg.de/f/b7dd6de95bd14e668665/) and [xlsx](https://keeper.mpdl.mpg.de/f/88d2afde308c421c93a8/) files.
+You can find the rosbags in [this](https://keeper.mpdl.mpg.de/d/793782b63d6149cf88aa/) folder.
+
+The complete list of results, including RPE and ATE can be found
+1. [here](https://keeper.mpdl.mpg.de/f/79e79b6406f94d8980e5/) for the 3.5m bags
+2. [here](https://keeper.mpdl.mpg.de/f/31e56cf0ca004bf6aec6/) for the 5m bags
+
+The logs of the results will be published in the near future [todo](fillthis)
 
 You can see how to process the rosbags to reproduce our results [here](https://github.com/robot-perception-group/GRADE_tools/tree/main)
+
+### TUM RGBD walking sequences
+The results using the network models trained above can be found [here](https://keeper.mpdl.mpg.de/f/4700b595ae444319bef8/). Please use our fork of [DynaSLAM](https://github.com/eliabntt/DynaSlam) when testing the `detectron2` models.
+
+More information can be found [here](https://github.com/robot-perception-group/GRADE_tools/tree/main)
 
 ______
 
